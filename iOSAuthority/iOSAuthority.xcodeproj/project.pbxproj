@@ -15,6 +15,7 @@
 		0C160B3020F443A8001AEADF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B2F20F443A7001AEADF /* TableViewController.m */; };
 		0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */; };
 		0C160B3D20F47F23001AEADF /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B3C20F47F23001AEADF /* PhotoViewController.m */; };
+		0C981E1520F5057800E06180 /* CameraAndMicrophoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetAuthorityViewController.m; sourceTree = "<group>"; };
 		0C160B3B20F47F23001AEADF /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		0C160B3C20F47F23001AEADF /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		0C981E1320F5057800E06180 /* CameraAndMicrophoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraAndMicrophoneViewController.h; sourceTree = "<group>"; };
+		0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAndMicrophoneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 				0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */,
 				0C160B3B20F47F23001AEADF /* PhotoViewController.h */,
 				0C160B3C20F47F23001AEADF /* PhotoViewController.m */,
+				0C981E1320F5057800E06180 /* CameraAndMicrophoneViewController.h */,
+				0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */,
 				0C160B1E20F44309001AEADF /* Main.storyboard */,
 				0C160B3320F45023001AEADF /* Main */,
 			);
@@ -169,6 +174,7 @@
 				0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */,
 				0C160B3020F443A8001AEADF /* TableViewController.m in Sources */,
 				0C160B3D20F47F23001AEADF /* PhotoViewController.m in Sources */,
+				0C981E1520F5057800E06180 /* CameraAndMicrophoneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +311,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZMX4C3B995;
-				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/Demo/iOSAuthority/iOSAuthority/Main/Config.pch;
+				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/github/iOSAuthority/iOSAuthority/iOSAuthority/Main/Config.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSAuthority/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -324,7 +330,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = ZMX4C3B995;
-				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/Demo/iOSAuthority/iOSAuthority/Main/Config.pch;
+				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/github/iOSAuthority/iOSAuthority/iOSAuthority/Main/Config.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSAuthority/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
