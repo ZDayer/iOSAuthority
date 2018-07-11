@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C126B2E20F5998F005E734B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C126B2D20F5998F005E734B /* AVFoundation.framework */; };
+		0C126B3320F5D384005E734B /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C126B3220F5D384005E734B /* LocationViewController.m */; };
+		0C126B3520F5D6C8005E734B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C126B3420F5D6C8005E734B /* CoreLocation.framework */; };
+		0C126B3920F5F03D005E734B /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C126B3820F5F03D005E734B /* NoticeViewController.m */; };
+		0C126B3C20F5F568005E734B /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C126B3B20F5F568005E734B /* AddressBookViewController.m */; };
+		0C126B3E20F5F65A005E734B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C126B3D20F5F65A005E734B /* AddressBook.framework */; };
 		0C160B1A20F44308001AEADF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B1920F44308001AEADF /* AppDelegate.m */; };
 		0C160B2020F44309001AEADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C160B1E20F44309001AEADF /* Main.storyboard */; };
 		0C160B2220F44309001AEADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C160B2120F44309001AEADF /* Assets.xcassets */; };
@@ -19,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C126B2D20F5998F005E734B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0C126B3120F5D384005E734B /* LocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		0C126B3220F5D384005E734B /* LocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		0C126B3420F5D6C8005E734B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0C126B3720F5F03D005E734B /* NoticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		0C126B3820F5F03D005E734B /* NoticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
+		0C126B3A20F5F568005E734B /* AddressBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookViewController.h; sourceTree = "<group>"; };
+		0C126B3B20F5F568005E734B /* AddressBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
+		0C126B3D20F5F65A005E734B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		0C160B1520F44308001AEADF /* iOSAuthority.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAuthority.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C160B1820F44308001AEADF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C160B1920F44308001AEADF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,17 +59,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C126B3E20F5F65A005E734B /* AddressBook.framework in Frameworks */,
+				0C126B3520F5D6C8005E734B /* CoreLocation.framework in Frameworks */,
+				0C126B2E20F5998F005E734B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C126B2C20F5998F005E734B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C126B3D20F5F65A005E734B /* AddressBook.framework */,
+				0C126B3420F5D6C8005E734B /* CoreLocation.framework */,
+				0C126B2D20F5998F005E734B /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0C160B0C20F44308001AEADF = {
 			isa = PBXGroup;
 			children = (
 				0C160B1720F44308001AEADF /* iOSAuthority */,
 				0C160B1620F44308001AEADF /* Products */,
+				0C126B2C20F5998F005E734B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,14 +100,20 @@
 			children = (
 				0C160B1820F44308001AEADF /* AppDelegate.h */,
 				0C160B1920F44308001AEADF /* AppDelegate.m */,
-				0C160B2F20F443A7001AEADF /* TableViewController.m */,
 				0C160B2E20F443A7001AEADF /* TableViewController.h */,
+				0C160B2F20F443A7001AEADF /* TableViewController.m */,
 				0C160B3720F45ADB001AEADF /* NetAuthorityViewController.h */,
 				0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */,
 				0C160B3B20F47F23001AEADF /* PhotoViewController.h */,
 				0C160B3C20F47F23001AEADF /* PhotoViewController.m */,
 				0C981E1320F5057800E06180 /* CameraAndMicrophoneViewController.h */,
 				0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */,
+				0C126B3120F5D384005E734B /* LocationViewController.h */,
+				0C126B3220F5D384005E734B /* LocationViewController.m */,
+				0C126B3720F5F03D005E734B /* NoticeViewController.h */,
+				0C126B3820F5F03D005E734B /* NoticeViewController.m */,
+				0C126B3A20F5F568005E734B /* AddressBookViewController.h */,
+				0C126B3B20F5F568005E734B /* AddressBookViewController.m */,
 				0C160B1E20F44309001AEADF /* Main.storyboard */,
 				0C160B3320F45023001AEADF /* Main */,
 			);
@@ -130,6 +165,11 @@
 					0C160B1420F44308001AEADF = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -171,10 +211,13 @@
 			files = (
 				0C160B2820F4430A001AEADF /* main.m in Sources */,
 				0C160B1A20F44308001AEADF /* AppDelegate.m in Sources */,
+				0C126B3920F5F03D005E734B /* NoticeViewController.m in Sources */,
+				0C126B3320F5D384005E734B /* LocationViewController.m in Sources */,
 				0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */,
 				0C160B3020F443A8001AEADF /* TableViewController.m in Sources */,
 				0C160B3D20F47F23001AEADF /* PhotoViewController.m in Sources */,
 				0C981E1520F5057800E06180 /* CameraAndMicrophoneViewController.m in Sources */,
+				0C126B3C20F5F568005E734B /* AddressBookViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +356,7 @@
 				DEVELOPMENT_TEAM = ZMX4C3B995;
 				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/github/iOSAuthority/iOSAuthority/iOSAuthority/Main/Config.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSAuthority/Main/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bankcomm.maidanba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -332,7 +375,7 @@
 				DEVELOPMENT_TEAM = ZMX4C3B995;
 				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/github/iOSAuthority/iOSAuthority/iOSAuthority/Main/Config.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSAuthority/Main/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bankcomm.maidanba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
