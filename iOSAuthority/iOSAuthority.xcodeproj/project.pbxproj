@@ -13,6 +13,9 @@
 		0C126B3920F5F03D005E734B /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C126B3820F5F03D005E734B /* NoticeViewController.m */; };
 		0C126B3C20F5F568005E734B /* AddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C126B3B20F5F568005E734B /* AddressBookViewController.m */; };
 		0C126B3E20F5F65A005E734B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C126B3D20F5F65A005E734B /* AddressBook.framework */; };
+		0C153FB120F7399900E61475 /* HealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C153FB020F7399900E61475 /* HealthViewController.m */; };
+		0C153FB420F739B700E61475 /* BluethoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C153FB320F739B700E61475 /* BluethoothViewController.m */; };
+		0C153FBB20F7407500E61475 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C153FBA20F7407500E61475 /* CoreBluetooth.framework */; };
 		0C160B1A20F44308001AEADF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B1920F44308001AEADF /* AppDelegate.m */; };
 		0C160B2020F44309001AEADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C160B1E20F44309001AEADF /* Main.storyboard */; };
 		0C160B2220F44309001AEADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C160B2120F44309001AEADF /* Assets.xcassets */; };
@@ -34,6 +37,12 @@
 		0C126B3A20F5F568005E734B /* AddressBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookViewController.h; sourceTree = "<group>"; };
 		0C126B3B20F5F568005E734B /* AddressBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookViewController.m; sourceTree = "<group>"; };
 		0C126B3D20F5F65A005E734B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		0C153FAF20F7399900E61475 /* HealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthViewController.h; sourceTree = "<group>"; };
+		0C153FB020F7399900E61475 /* HealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthViewController.m; sourceTree = "<group>"; };
+		0C153FB220F739B700E61475 /* BluethoothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluethoothViewController.h; sourceTree = "<group>"; };
+		0C153FB320F739B700E61475 /* BluethoothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluethoothViewController.m; sourceTree = "<group>"; };
+		0C153FB720F73FE700E61475 /* iOSAuthority.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSAuthority.entitlements; sourceTree = "<group>"; };
+		0C153FBA20F7407500E61475 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0C160B1520F44308001AEADF /* iOSAuthority.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAuthority.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C160B1820F44308001AEADF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C160B1920F44308001AEADF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C153FBB20F7407500E61475 /* CoreBluetooth.framework in Frameworks */,
 				0C126B3E20F5F65A005E734B /* AddressBook.framework in Frameworks */,
 				0C126B3520F5D6C8005E734B /* CoreLocation.framework in Frameworks */,
 				0C126B2E20F5998F005E734B /* AVFoundation.framework in Frameworks */,
@@ -71,6 +81,7 @@
 		0C126B2C20F5998F005E734B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C153FBA20F7407500E61475 /* CoreBluetooth.framework */,
 				0C126B3D20F5F65A005E734B /* AddressBook.framework */,
 				0C126B3420F5D6C8005E734B /* CoreLocation.framework */,
 				0C126B2D20F5998F005E734B /* AVFoundation.framework */,
@@ -98,6 +109,7 @@
 		0C160B1720F44308001AEADF /* iOSAuthority */ = {
 			isa = PBXGroup;
 			children = (
+				0C153FB720F73FE700E61475 /* iOSAuthority.entitlements */,
 				0C160B1820F44308001AEADF /* AppDelegate.h */,
 				0C160B1920F44308001AEADF /* AppDelegate.m */,
 				0C160B2E20F443A7001AEADF /* TableViewController.h */,
@@ -114,6 +126,10 @@
 				0C126B3820F5F03D005E734B /* NoticeViewController.m */,
 				0C126B3A20F5F568005E734B /* AddressBookViewController.h */,
 				0C126B3B20F5F568005E734B /* AddressBookViewController.m */,
+				0C153FAF20F7399900E61475 /* HealthViewController.h */,
+				0C153FB020F7399900E61475 /* HealthViewController.m */,
+				0C153FB220F739B700E61475 /* BluethoothViewController.h */,
+				0C153FB320F739B700E61475 /* BluethoothViewController.m */,
 				0C160B1E20F44309001AEADF /* Main.storyboard */,
 				0C160B3320F45023001AEADF /* Main */,
 			);
@@ -169,6 +185,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
 						};
 					};
 				};
@@ -217,7 +236,9 @@
 				0C160B3020F443A8001AEADF /* TableViewController.m in Sources */,
 				0C160B3D20F47F23001AEADF /* PhotoViewController.m in Sources */,
 				0C981E1520F5057800E06180 /* CameraAndMicrophoneViewController.m in Sources */,
+				0C153FB120F7399900E61475 /* HealthViewController.m in Sources */,
 				0C126B3C20F5F568005E734B /* AddressBookViewController.m in Sources */,
+				0C153FB420F739B700E61475 /* BluethoothViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>是否许允此App使用蓝牙？</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Health Update Usage Description</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Health Share Usage Description</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

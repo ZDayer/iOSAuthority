@@ -95,9 +95,6 @@ kABAuthorizationStatusAuthorized            // deprecated, use CNAuthorizationSt
         });
         
     }
-    
-    
-    
 }
 
 @end
