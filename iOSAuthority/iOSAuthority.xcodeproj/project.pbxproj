@@ -25,6 +25,7 @@
 		0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */; };
 		0C160B3D20F47F23001AEADF /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B3C20F47F23001AEADF /* PhotoViewController.m */; };
 		0C981E1520F5057800E06180 /* CameraAndMicrophoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */; };
+		0CF1292F20FC83480044F884 /* GradientImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF1292E20FC83480044F884 /* GradientImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		0C160B3C20F47F23001AEADF /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		0C981E1320F5057800E06180 /* CameraAndMicrophoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraAndMicrophoneViewController.h; sourceTree = "<group>"; };
 		0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAndMicrophoneViewController.m; sourceTree = "<group>"; };
+		0CF1292D20FC83480044F884 /* GradientImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientImage.h; sourceTree = "<group>"; };
+		0CF1292E20FC83480044F884 /* GradientImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 		0C160B1720F44308001AEADF /* iOSAuthority */ = {
 			isa = PBXGroup;
 			children = (
+				0CF1292C20FC83480044F884 /* GradientImage */,
 				0C153FB720F73FE700E61475 /* iOSAuthority.entitlements */,
 				0C160B1820F44308001AEADF /* AppDelegate.h */,
 				0C160B1920F44308001AEADF /* AppDelegate.m */,
@@ -147,6 +151,15 @@
 				0C160B3620F45161001AEADF /* Config.pch */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		0CF1292C20FC83480044F884 /* GradientImage */ = {
+			isa = PBXGroup;
+			children = (
+				0CF1292D20FC83480044F884 /* GradientImage.h */,
+				0CF1292E20FC83480044F884 /* GradientImage.m */,
+			);
+			path = GradientImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +244,7 @@
 				0C160B2820F4430A001AEADF /* main.m in Sources */,
 				0C160B1A20F44308001AEADF /* AppDelegate.m in Sources */,
 				0C126B3920F5F03D005E734B /* NoticeViewController.m in Sources */,
+				0CF1292F20FC83480044F884 /* GradientImage.m in Sources */,
 				0C126B3320F5D384005E734B /* LocationViewController.m in Sources */,
 				0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */,
 				0C160B3020F443A8001AEADF /* TableViewController.m in Sources */,
@@ -372,17 +386,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZMX4C3B995;
+				DEVELOPMENT_TEAM = 65YG889FGF;
 				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/github/iOSAuthority/iOSAuthority/iOSAuthority/Main/Config.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSAuthority/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bankcomm.maidanba;
+				OTHER_CFLAGS = (
+					"-mllvm",
+					"-chenxify-control-flow",
+					"-mllvm",
+					"-chenxify-control-flow-probability=10",
+					"-mllvm",
+					"-falsify-control-flow",
+					"-mllvm",
+					"-falsify-control-flow-percentage=10",
+					"-mllvm",
+					"-falsify-control-flow-probability=10",
+					"-mllvm",
+					"-encrypt-constant-string",
+					"-mllvm",
+					"-encrypt-constant-string-probability=30",
+					"-mllvm",
+					"-virtualize-basic-block",
+					"-mllvm",
+					"-virtualize-basic-block-probability=10",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yitong.maidanba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "341bc07b-5c6e-47df-83f1-f2f6768de58f";
-				PROVISIONING_PROFILE_SPECIFIER = mandanba_PF;
+				PROVISIONING_PROFILE = "ea7ea0e7-a833-40d3-93ee-c47e1cad4a04";
+				PROVISIONING_PROFILE_SPECIFIER = YTEnterpriseDist2018;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -391,17 +425,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = ZMX4C3B995;
+				DEVELOPMENT_TEAM = 65YG889FGF;
 				GCC_PREFIX_HEADER = /Users/zhaoyang/Desktop/github/iOSAuthority/iOSAuthority/iOSAuthority/Main/Config.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/iOSAuthority/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bankcomm.maidanba;
+				OTHER_CFLAGS = (
+					"-mllvm",
+					"-chenxify-control-flow",
+					"-mllvm",
+					"-chenxify-control-flow-probability=10",
+					"-mllvm",
+					"-falsify-control-flow",
+					"-mllvm",
+					"-falsify-control-flow-percentage=10",
+					"-mllvm",
+					"-falsify-control-flow-probability=10",
+					"-mllvm",
+					"-encrypt-constant-string",
+					"-mllvm",
+					"-encrypt-constant-string-probability=30",
+					"-mllvm",
+					"-virtualize-basic-block",
+					"-mllvm",
+					"-virtualize-basic-block-probability=10",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yitong.maidanba;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "341bc07b-5c6e-47df-83f1-f2f6768de58f";
-				PROVISIONING_PROFILE_SPECIFIER = mandanba_PF;
+				PROVISIONING_PROFILE = "ea7ea0e7-a833-40d3-93ee-c47e1cad4a04";
+				PROVISIONING_PROFILE_SPECIFIER = YTEnterpriseDist2018;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
