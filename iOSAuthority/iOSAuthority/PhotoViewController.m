@@ -41,18 +41,13 @@ typedef NS_ENUM(NSUInteger, PhotoStatus) {
         // 去选择图片
         [self choosePhoto];
     } else {
-        if (iOS8Later) {
-            if (@available(iOS 8.0, *)) {
-                [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-                    if (status == PHAuthorizationStatusAuthorized) {
-                        // 用户点击了允许, 去相册选取图片
-                        [self choosePhoto];
-                    }
-                }];
-            }
-        } else if (!iOS9Later) {
-            // 去选择图片
-            [self choosePhoto];
+        if (iOS8Later) { // 提醒
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                if (status == PHAuthorizationStatusAuthorized) {
+                    // 用户点击了允许, 去相册选取图片
+                    [self choosePhoto];
+                }
+            }];
         }
     }
 }
@@ -61,20 +56,19 @@ typedef NS_ENUM(NSUInteger, PhotoStatus) {
 
 
 - (PhotoStatus)checkPhotoAuthority {
- 
+    
     if (iOS8Later&&!iOS11Later) {
         // 该API在 iOS 8.0 系统 以后使用
         // 在 iOS 11.0 系统以上时, 读取相册中的内容不需要权限, 向相册中写入数据才需要权限
-        if (@available(iOS 8.0, *)) {
-            PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-            switch (status) {
-                case PHAuthorizationStatusNotDetermined:    return PhotoStatusNotDetermined; break;
-                case PHAuthorizationStatusRestricted:       return PhotoStatusDenied; break;
-                case PHAuthorizationStatusDenied:           return PhotoStatusDenied; break;
-                case PHAuthorizationStatusAuthorized:       return PhotoStatusAuthorized; break;
-            }
+        PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+        switch (status) {
+            case PHAuthorizationStatusNotDetermined:    return PhotoStatusNotDetermined; break;
+            case PHAuthorizationStatusRestricted:       return PhotoStatusDenied; break;
+            case PHAuthorizationStatusDenied:           return PhotoStatusDenied; break;
+            case PHAuthorizationStatusAuthorized:       return PhotoStatusAuthorized; break;
         }
-    } else if (!iOS9Later) {
+    }
+    else if (!iOS9Later) {
         // 该 API 在 iOS 9.0 系统一下使用
         ALAuthorizationStatus status = [ALAssetsLibrary authorizationStatus];
         switch (status) {
