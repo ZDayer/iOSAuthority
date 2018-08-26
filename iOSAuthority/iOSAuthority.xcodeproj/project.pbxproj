@@ -15,6 +15,7 @@
 		0C160B3020F443A8001AEADF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B2F20F443A7001AEADF /* TableViewController.m */; };
 		0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */; };
 		0C160B3D20F47F23001AEADF /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C160B3C20F47F23001AEADF /* PhotoViewController.m */; };
+		0C1704A221328451002C2417 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1704A121328451002C2417 /* ViewController.m */; };
 		0C981E1520F5057800E06180 /* CameraAndMicrophoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		0C160B3820F45ADB001AEADF /* NetAuthorityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetAuthorityViewController.m; sourceTree = "<group>"; };
 		0C160B3B20F47F23001AEADF /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		0C160B3C20F47F23001AEADF /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		0C1704A021328451002C2417 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0C1704A121328451002C2417 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0C981E1320F5057800E06180 /* CameraAndMicrophoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraAndMicrophoneViewController.h; sourceTree = "<group>"; };
 		0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraAndMicrophoneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +83,8 @@
 				0C981E1320F5057800E06180 /* CameraAndMicrophoneViewController.h */,
 				0C981E1420F5057800E06180 /* CameraAndMicrophoneViewController.m */,
 				0C160B1E20F44309001AEADF /* Main.storyboard */,
+				0C1704A021328451002C2417 /* ViewController.h */,
+				0C1704A121328451002C2417 /* ViewController.m */,
 				0C160B3320F45023001AEADF /* Main */,
 			);
 			path = iOSAuthority;
@@ -169,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1704A221328451002C2417 /* ViewController.m in Sources */,
 				0C160B2820F4430A001AEADF /* main.m in Sources */,
 				0C160B1A20F44308001AEADF /* AppDelegate.m in Sources */,
 				0C160B3920F45ADB001AEADF /* NetAuthorityViewController.m in Sources */,
